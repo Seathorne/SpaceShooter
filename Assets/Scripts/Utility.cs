@@ -132,4 +132,6 @@ public static class Utility
             doneCount++;
         }
     }
+
+    public static Vector2 RotateBy(this Vector2 vector, float degrees) => Quaternion.AngleAxis(degrees, Vector2.up) * vector;
 }

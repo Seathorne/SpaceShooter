@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
 
     public float LinearThrottle;
     public float LinearBrake;
+    public float LinearFriction;
 
     public float AngularThrottle;
+    public float AngularFriction;
 
     public Mover Mover { get; private set; }
 
@@ -41,8 +43,8 @@ public class Player : MonoBehaviour
             return;
         }
 
-        UpdateMover();
-        Utility.Print($"{Mover.Position},{Mover.Velocity},{Mover.Linear}, {Mover.Orientation},{Mover.Rotation},{Mover.Angular}");
+        //UpdateMover();
+        //Utility.Print($"{Mover.Position},{Mover.Velocity},{Mover.Linear}, {Mover.Orientation},{Mover.Rotation},{Mover.Angular}");
     }
 
     private Steering PlayerRelative()
@@ -59,11 +61,23 @@ public class Player : MonoBehaviour
             // If right/left held, update angular
             result.Angular = left ? AngularThrottle : -AngularThrottle;
         }
+        else if (Mover.Angular != 0f)
+        {
+            result.Angular = Mathf.Sign(-Mover.Velocity.x) * AngularFriction;
+        }
 
         if (up ^ down)
         {
             // If up/down held, update linear
-            result.Linear = Mover.Orientation.RadianToVector2() * (up ? LinearThrottle : LinearBrake);
+            result.Linear = Mover.Orientation.RadianToVector2() * (up ? LinearThrottle : -LinearBrake);
+        }
+        else if (Mover.Velocity.magnitude != 0f)
+        {
+            result.Linear = new Vector2
+            {
+                x = Mathf.Sign(-Mover.Velocity.x) * LinearFriction,
+                y = Mathf.Sign(-Mover.Velocity.y) * LinearFriction,
+            };
         }
 
         return result;
@@ -72,6 +86,7 @@ public class Player : MonoBehaviour
     private void UpdateMover()
     {
         var steering = PlayerRelative();
+        Utility.Print($"asldkjsalkd{steering.Linear} {steering.Angular}");
         Mover.Update(steering, Time.deltaTime);
 
         var rb = GetComponent<Rigidbody2D>();

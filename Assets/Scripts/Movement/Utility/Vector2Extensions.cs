@@ -14,7 +14,11 @@ namespace MovementCore.Utility
         /// </summary>
         /// <param name="a">The vector whose orientation to calculate.</param>
         /// <returns>The direction this vector points.</returns>
-        public static float Orientation(this Vector2 a) => Mathf.Atan2(a.y, a.x);
+        public static float Angle(this Vector2 a) => Mathf.Atan2(a.y, a.x) * Mathf.Rad2Deg;
+
+        public static float Orientation(this Quaternion a) => Mathf.Atan2(a.eulerAngles.y, a.eulerAngles.x);
+
+        public static float Sign(this float a) => (a == 0f) ? 0f : (a > 0f) ? 1f : -1f;
 
         public static Vector2 RadianToVector2(this float rad) => new Vector2
         {
@@ -28,7 +32,7 @@ namespace MovementCore.Utility
         /// <param name="a">The left-hand operand of the cross product operation.</param>
         /// <param name="b">The right-hand operand of the cross product operation.</param>
         /// <returns>The cross product of the provided vectors.</returns>
-        public static double CrossProduct(this Vector2 a, Vector2 b) => a.magnitude * b.magnitude * Mathf.Sin(Orientation(a) - Orientation(b));
+        public static double CrossProduct(this Vector2 a, Vector2 b) => a.magnitude * b.magnitude * Mathf.Sin(Angle(a) - Angle(b));
 
         /// <summary>
         /// Returns the minimum distance between a query point and a line segment.
@@ -66,6 +70,15 @@ namespace MovementCore.Utility
             }
 
             return a + (line * T);
+        }
+
+        public static float Sigmoid(this float value)
+        {
+            const float a = 6f;
+            const float b = -18f;
+            const float k = 1f;
+
+            return k / (1f + Mathf.Exp(a + b * value));
         }
     }
 }

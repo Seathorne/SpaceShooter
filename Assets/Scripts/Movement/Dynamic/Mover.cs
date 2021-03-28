@@ -125,6 +125,9 @@ namespace MovementCore.Dynamic
         /// <param name="precision">The precision with which to perform physics calculations.</param>
         public void Update(Steering acceleration, float dt, Precision precision = Precision.NewtonEuler1)
         {
+            //acceleration.Linear = Vector2.ClampMagnitude(acceleration.Linear, MaxLinear);
+            //acceleration.Angular = Mathf.Clamp(acceleration.Angular, -MaxAngular, MaxAngular);
+
             switch (precision)
             {
                 case Precision.Precise:
@@ -157,7 +160,7 @@ namespace MovementCore.Dynamic
             if (Align)
             {
                 // Align orientation to direction of velocity
-                Orientation = Velocity.Orientation();
+                Orientation = Velocity.Angle();
             }
 
             // Update linear/angular acceleration
