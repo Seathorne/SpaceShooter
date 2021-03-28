@@ -1,96 +1,98 @@
-﻿using MovementCore.Base;
-using MovementCore.Dynamic;
-using MovementCore.Utility;
 
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace Assets.Scripts
 {
-    public float MaxSpeed;
-    public float MaxRotation;
-
-    public float LinearThrottle;
-    public float LinearBrake;
-    public float LinearFriction;
-
-    public float AngularThrottle;
-    public float AngularFriction;
-
-    public Mover Mover { get; private set; }
-
-    /// <summary>
-    /// Start is called before the first frame update.
-    /// </summary>
-    protected void Start()
+    public class Player : Ship
     {
-        Mover = new Mover
-        {
-            Behavior = SteeringBehavior.PlayerRelative,
-            MaxSpeed = MaxSpeed,
-            MaxRotation = MaxRotation,
-            MaxLinear = Mathf.Max(LinearThrottle, LinearBrake),
-            MaxAngular = AngularThrottle,
-        };
-    }
+        [Header("Presets")]
+        [SerializeField] private BulletArgs basicBulletArgs;
 
-    /// <summary>
-    /// Update is called once per frame.
-    /// </summary>
-    protected void Update()
-    {
-        if (GameManager.IsPaused)
+        [SerializeField] private AnimationCurve LinearThrottleCurve;
+
+        [SerializeField] private AnimationCurve LinearBrakeCurve;
+
+        [SerializeField] private AnimationCurve AngularThrottleCurve;
+
+        [field: Header("Movement")]
+        [field: SerializeField, Range(0f, 100f)] public float LinearThrottle { get; protected set; }
+
+        [field: SerializeField, Range(0f, 100f)] public float LinearBrake { get; protected set; }
+
+        [field: SerializeField, Range(0f, 360f)] public float AngularThrottle { get; protected set; }
+
+        protected void Start()
         {
-            return;
+            BulletArgs = basicBulletArgs;
+            BulletFactory = FindObjectOfType<BulletGenerator>().ShootBasic;
         }
 
-        //UpdateMover();
-        //Utility.Print($"{Mover.Position},{Mover.Velocity},{Mover.Linear}, {Mover.Orientation},{Mover.Rotation},{Mover.Angular}");
-    }
-
-    private Steering PlayerRelative()
-    {
-        // Shorthand for keys that are held
-        bool right = VirtualKey.RotateRight.IsHeld();
-        bool left = VirtualKey.RotateLeft.IsHeld();
-        bool up = VirtualKey.Accelerate.IsHeld();
-        bool down = VirtualKey.Brake.IsHeld();
-
-        Steering result = Steering.Null;
-        if (right ^ left)
+        protected void Update()
         {
-            // If right/left held, update angular
-            result.Angular = left ? AngularThrottle : -AngularThrottle;
-        }
-        else if (Mover.Angular != 0f)
-        {
-            result.Angular = Mathf.Sign(-Mover.Velocity.x) * AngularFriction;
-        }
-
-        if (up ^ down)
-        {
-            // If up/down held, update linear
-            result.Linear = Mover.Orientation.RadianToVector2() * (up ? LinearThrottle : -LinearBrake);
-        }
-        else if (Mover.Velocity.magnitude != 0f)
-        {
-            result.Linear = new Vector2
+            if (!GameManager.IsPaused)
             {
-                x = Mathf.Sign(-Mover.Velocity.x) * LinearFriction,
-                y = Mathf.Sign(-Mover.Velocity.y) * LinearFriction,
-            };
+                if (Input.GetButtonDown(Controls.ShootButton))
+                {
+                    print($"Shoot :)");
+
+                    Shoot();
+
+                    //var args = new BulletArgs
+                    //{
+                    //    Source = transform,
+                    //    Facing = Facing,
+                    //    Damage = 1.5f,
+                    //    Speed = 10f,
+                    //};
+                    //BulletGenerator.ShootBasic(args);
+
+                    //var bullet = Instantiate(FindObjectOfType<BulletGenerator>().basicBullet);
+                    //var bullet = FindObjectOfType<BulletGenerator>().Spawn();
+
+                    //bullet.transform.position = transform.position;
+                    //bullet.transform.rotation = transform.rotation;
+                    //bullet.transform.localScale = transform.localScale;
+
+                    //var rb = bullet.GetComponent<Rigidbody2D>();
+                    //rb.velocity = Facing * 10f;
+                }
+            }
         }
 
-        return result;
-    }
+        protected override void UpdateMove()
+        {
+            var rb = GetComponent<Rigidbody2D>();
 
-    private void UpdateMover()
-    {
-        var steering = PlayerRelative();
-        Utility.Print($"asldkjsalkd{steering.Linear} {steering.Angular}");
-        Mover.Update(steering, Time.deltaTime);
+            float input = Input.GetAxis(Controls.VerticalAxis);
+            if (input > 0f)
+            {
+                // Apply forward throttle
+                rb.AddForce(Facing * LinearThrottle * LinearThrottleCurve.Evaluate(input));
+            }
+            else if (input < 0f && rb.velocity.magnitude > 0f)
+            {
+                // Apply brake against movement direction
+                rb.AddForce(-rb.velocity.normalized * LinearBrake * LinearBrakeCurve.Evaluate(-input));
+            }
 
-        var rb = GetComponent<Rigidbody2D>();
-        rb.MoveRotation(Mover.Orientation * Mathf.Rad2Deg);
-        rb.MovePosition(Mover.Position);
+            // Clamp actual velocity
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+        }
+
+        protected override void UpdateRotate()
+        {
+            var rb = GetComponent<Rigidbody2D>();
+
+            float input = Input.GetAxis(Controls.HorizontalAxis);
+            float inputMag = Mathf.Abs(input);
+            if (inputMag > 0f)
+            {
+                // Apply cw/ccw throttle
+                rb.AddTorque(Mathf.Sign(-input) * AngularThrottle * AngularThrottleCurve.Evaluate(inputMag));
+            }
+
+            // Clamp actual rotation
+            rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -MaxRotation, MaxRotation);
+        }
     }
 }
