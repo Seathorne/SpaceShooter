@@ -19,7 +19,8 @@ namespace Assets.Scripts
             // Shoot bullet
             Relocate(source.transform, bullet);
             var rb = bullet.GetComponent<Rigidbody2D>();
-            rb.velocity = source.Facing * args.Speed;
+            var sourceRb = source.GetComponent<Rigidbody2D>();
+            rb.velocity = source.Facing * args.Speed + sourceRb.velocity;
 
             return new Bullet[] { bullet };
         }

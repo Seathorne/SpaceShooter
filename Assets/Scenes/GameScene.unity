@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxSpeed>k__BackingField: 50
-  <MaxRotation>k__BackingField: 50
+  <MaxRotation>k__BackingField: 15
   <Health>k__BackingField: 100
   <Defense>k__BackingField: 0
   basicBulletArgs:
@@ -510,7 +510,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   <LinearThrottle>k__BackingField: 25
   <LinearBrake>k__BackingField: 0
-  <AngularThrottle>k__BackingField: 25
+  <AngularThrottle>k__BackingField: 10
 --- !u!212 &809365500
 SpriteRenderer:
   m_ObjectHideFlags: 0

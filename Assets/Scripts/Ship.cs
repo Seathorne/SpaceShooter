@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace Assets.Scripts
 
         [field: SerializeField, Range(0f, 100f)] public float Defense { get; protected set; }
 
+        public event EventHandler Died;
+
         public BulletArgs BulletArgs { get; protected set; }
 
         public BulletFactory BulletFactory { get; protected set; }
@@ -23,6 +26,13 @@ namespace Assets.Scripts
         public Vector2 Position => transform.position;
 
         public Vector2 Facing => transform.up;
+
+        protected virtual void Start()
+        {
+            Died += (sender, args) => GameManager.UpdateScore(this);
+            Died += (sender, args) => GameManager.SpawnAnother(this);
+            Died += (sender, args) => Destroy(gameObject);
+        }
 
         protected virtual void FixedUpdate()
         {
@@ -50,15 +60,9 @@ namespace Assets.Scripts
                 Health -= damage;
                 if (Health <= 0f)
                 {
-                    Die();
+                    Died?.Invoke(this, null);
                 }
             }
-        }
-
-        protected virtual void Die()
-        {
-            Destroy(gameObject);
-            GameManager.UpdateScore(this);
         }
     }
 }

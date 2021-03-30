@@ -15,6 +15,12 @@ namespace Assets.Scripts
 
         public static float Score { get; private set; }
 
+        public static Vector2 HalfScreenSize => new Vector2
+        {
+            x = Vector2.Distance(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)), Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0))) * 0.5f,
+            y = Vector2.Distance(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)), Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height))) * 0.5f,
+        };
+
         /// <summary>
         /// Use this for initialization.
         /// </summary>
@@ -69,6 +75,19 @@ namespace Assets.Scripts
             // TODO
             Score += 1;
             print($"Score: {Score}");
+        }
+
+        public static void SpawnAnother(Ship prefab)
+        {
+            var ship = Instantiate(prefab);
+
+            (float x, float y) halfSize = (0.5f, 0.5f);
+
+            ship.transform.position = new Vector2
+            {
+                x = Random.Range(-HalfScreenSize.x + halfSize.x, HalfScreenSize.x - halfSize.x),
+                y = Random.Range(-HalfScreenSize.y + halfSize.y, HalfScreenSize.y - halfSize.y)
+            };
         }
     }
 }

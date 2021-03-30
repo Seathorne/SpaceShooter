@@ -77,6 +77,8 @@ namespace Assets.Scripts
 
             // Clamp actual velocity
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);
+
+            StayInBounds();
         }
 
         protected override void UpdateRotate()
@@ -93,6 +95,56 @@ namespace Assets.Scripts
 
             // Clamp actual rotation
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -MaxRotation, MaxRotation);
+        }
+
+        private void StayInBounds()
+        {
+            var screenSize = GameManager.HalfScreenSize;
+            (float x, float y) halfSize = (0.5f, 0.5f);
+
+            var rb = GetComponent<Rigidbody2D>();
+            var newPos = Position;
+            var newVel = rb.velocity;
+            var force = Vector2.zero;
+            const float bounce = 50f;
+
+            bool outside = false;
+
+            if (Position.x + halfSize.x > screenSize.x)
+            {
+                newPos.x = screenSize.x - halfSize.x;
+                newVel.x = 0f;
+                force.x = -bounce;
+                outside = true;
+            }
+            else if (Position.x - halfSize.x < -screenSize.x)
+            {
+                newPos.x = -screenSize.x + halfSize.x;
+                newVel.x = 0f;
+                force.x = bounce;
+                outside = true;
+            }
+            
+            if (Position.y + halfSize.y > screenSize.y)
+            {
+                newPos.y = screenSize.y - halfSize.y;
+                newVel.y = 0f;
+                force.y = -bounce;
+                outside = true;
+            }
+            else if (Position.y - halfSize.y < -screenSize.y)
+            {
+                newPos.y = -screenSize.y + halfSize.y;
+                newVel.y = 0f;
+                force.y = bounce;
+                outside = true;
+            }
+
+            if (outside == false) return;
+
+            rb.MovePosition(newPos);
+            rb.velocity = newVel;
+            rb.AddForce(force);
         }
     }
 }
