@@ -43,21 +43,6 @@ public class Asteroid : Ship
         return asteroid;
     }
 
-    //protected new void Start()
-    //{
-    //    base.Start();
-    //}
-
-    //protected new void Update()
-    //{
-    //    base.Update();
-    //}
-
-    //protected new void FixedUpdate()
-    //{
-    //    base.FixedUpdate();
-    //}
-
     protected override void UpdateMove()
     {
         if (!GameManager.IsWithinScreen(transform, Outside))

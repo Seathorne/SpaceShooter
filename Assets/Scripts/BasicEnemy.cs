@@ -10,6 +10,7 @@
             SetWeapon(generator.ShootBasic, generator.BasicBulletArgs);
 
             Behaviors += () => ShipExt.Face(this, GameManager.Instance.player);
+            Behaviors += () => ShipExt.Seek(this, GameManager.Instance.player);
             Died += () => GameManager.SpawnAnother(prefab);
         }
 
@@ -24,7 +25,8 @@
 
         protected override void UpdateMove()
         {
-            StayInBounds();
+            //ShipExt.Seek(this, GameManager.Instance.player);
+            //StayInBounds();
         }
 
         protected override void UpdateRotate()

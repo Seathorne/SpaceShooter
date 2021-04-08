@@ -26,6 +26,8 @@ namespace Assets.Scripts
 
         [field: SerializeField, Range(0f, 100f)] public float MaxHealth { get; protected set; }
 
+        [field: SerializeField, Range(0f, 100f)] public float CollisionDamage { get; protected set; }
+
         [SerializeField, Range(0f, 100f)] private float _Health;
 
         public float Health
@@ -67,6 +69,8 @@ namespace Assets.Scripts
         protected void Start()
         {
             Died += () => GameManager.UpdateScore(prefab);
+
+            lastShootTime = Time.time;
         }
 
         protected void Update()
@@ -115,7 +119,17 @@ namespace Assets.Scripts
 
         public virtual void HitBy(Bullet bullet)
         {
-            float damage = bullet.Damage - Defense;
+            TakeDamage(bullet.Damage);
+        }
+
+        public virtual void HitBy(Ship ship)
+        {
+            TakeDamage(ship.CollisionDamage * (1f + 0.15f * ship.GetComponent<Rigidbody2D>().velocity.magnitude));
+        }
+
+        private void TakeDamage(float preDefenseDamage)
+        {
+            float damage = preDefenseDamage - Defense;
             if (damage > 0f)
             {
                 Health -= damage;
@@ -127,8 +141,18 @@ namespace Assets.Scripts
             }
         }
 
+        protected void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.GetComponent<Ship>() is Ship ship)
+            {
+                this.HitBy(ship);
+                ship.HitBy(this);
+            }
+        }
+
         public void Die()
         {
+            Health = 0f;
             Died?.Invoke();
             Destroy(gameObject);
         }

@@ -36,25 +36,6 @@ namespace Assets.Scripts
                 if (Input.GetButton(Controls.ShootButton))
                 {
                     TryShoot();
-
-                    //var args = new BulletArgs
-                    //{
-                    //    Source = transform,
-                    //    Facing = Facing,
-                    //    Damage = 1.5f,
-                    //    Speed = 10f,
-                    //};
-                    //BulletGenerator.ShootBasic(args);
-
-                    //var bullet = Instantiate(FindObjectOfType<BulletGenerator>().basicBullet);
-                    //var bullet = FindObjectOfType<BulletGenerator>().Spawn();
-
-                    //bullet.transform.position = transform.position;
-                    //bullet.transform.rotation = transform.rotation;
-                    //bullet.transform.localScale = transform.localScale;
-
-                    //var rb = bullet.GetComponent<Rigidbody2D>();
-                    //rb.velocity = Facing * 10f;
                 }
             }
         }

@@ -18,11 +18,14 @@ namespace Assets.Scripts
         public HealthBar healthBarPrefab;
         public Asteroid asteroidPrefab;
         public Text scoreText;
+        public Ship basicEnemyPrefab;
 
         private float lastAsteroidTime;
         [SerializeField, Range(0f, 60f)] private float asteroidSpawnTime;
         [SerializeField] private AnimationCurve asteroidSpawnTimeCurve;
         [SerializeField, Range(0f, 10f)] private float maxAsteroidCount;
+
+        [SerializeField, Range(0f, 10f)] private float maxShipCount;
 
         public const string HighScore = "HighScore";
         public const string GameScene = "GameScene";
@@ -53,6 +56,8 @@ namespace Assets.Scripts
             {
                 CreateHealthBar(ship);
             }
+            SpawnAnother(basicEnemyPrefab);
+
             UpdateScore(null);
         }
 
@@ -205,12 +210,41 @@ namespace Assets.Scripts
 
         public static void SpawnAnother(Ship prefab)
         {
-            var ship = Instantiate(prefab);
-            ship.Health = prefab.MaxHealth;
+            if (Score < 10)
+            {
+                Instance.maxAsteroidCount = 2;
+                Instance.maxShipCount = 1;
+            }
+            else if (Score < 20)
+            {
+                Instance.maxAsteroidCount = 3;
+                Instance.maxShipCount = 2;
+            }
+            else if (Score < 50)
+            {
+                Instance.maxAsteroidCount = 4;
+                Instance.maxShipCount = 3;
+            }
+            else if (Score < 100)
+            {
+                Instance.maxAsteroidCount = 5;
+                Instance.maxShipCount = 4;
+            }
+            else
+            {
+                Instance.maxAsteroidCount = 2 + (Score / 25);
+                Instance.maxShipCount = 3 + (Score / 50);
+            }
 
-            ship.transform.position = ScreenPosition(new Vector2(0.5f, 0.5f));
+            for (int i = FindObjectsOfType<BasicEnemy>().Length; i <= Instance.maxShipCount; i++)
+            {
+                var ship = Instantiate(prefab);
+                ship.Health = prefab.MaxHealth;
 
-            CreateHealthBar(ship);
+                ship.transform.position = ScreenEdgePosition(new Vector2(-1f, -1f));
+
+                CreateHealthBar(ship);
+            }
         }
 
         private static void CreateHealthBar(Ship ship)
