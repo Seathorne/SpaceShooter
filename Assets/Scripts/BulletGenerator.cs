@@ -8,11 +8,14 @@ namespace Assets.Scripts
 
     public class BulletGenerator : MonoBehaviour
     {
-        [SerializeField] public Bullet basicBullet;
+        [SerializeField] private Bullet basicBulletPrefab;
+
+        [Header("Presets")]
+        [SerializeField] public BulletArgs BasicBulletArgs;
 
         public IEnumerable<Bullet> ShootBasic(Ship source, BulletArgs args)
         {
-            var bullet = Instantiate(basicBullet);
+            var bullet = Instantiate(basicBulletPrefab);
             bullet.Source = source;
             bullet.Damage = args.Damage;
 

@@ -5,9 +5,6 @@ namespace Assets.Scripts
 {
     public class Player : Ship
     {
-        [Header("Presets")]
-        [SerializeField] private BulletArgs basicBulletArgs;
-
         [SerializeField] private AnimationCurve LinearThrottleCurve;
 
         [SerializeField] private AnimationCurve LinearBrakeCurve;
@@ -21,21 +18,21 @@ namespace Assets.Scripts
 
         [field: SerializeField, Range(0f, 360f)] public float AngularThrottle { get; protected set; }
 
-        protected void Start()
+        protected new void Start()
         {
-            BulletArgs = basicBulletArgs;
-            BulletFactory = FindObjectOfType<BulletGenerator>().ShootBasic;
+            base.Start();
+
+            SetWeapon(GameManager.BulletGenerator.ShootBasic, GameManager.BulletGenerator.BasicBulletArgs);
         }
 
-        protected void Update()
+        protected new void Update()
         {
+            base.Update();
             if (!GameManager.IsPaused)
             {
-                if (Input.GetButtonDown(Controls.ShootButton))
+                if (Input.GetButton(Controls.ShootButton))
                 {
-                    print($"Shoot :)");
-
-                    Shoot();
+                    TryShoot();
 
                     //var args = new BulletArgs
                     //{
@@ -95,56 +92,6 @@ namespace Assets.Scripts
 
             // Clamp actual rotation
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -MaxRotation, MaxRotation);
-        }
-
-        private void StayInBounds()
-        {
-            var screenSize = GameManager.HalfScreenSize;
-            (float x, float y) halfSize = (0.5f, 0.5f);
-
-            var rb = GetComponent<Rigidbody2D>();
-            var newPos = Position;
-            var newVel = rb.velocity;
-            var force = Vector2.zero;
-            const float bounce = 50f;
-
-            bool outside = false;
-
-            if (Position.x + halfSize.x > screenSize.x)
-            {
-                newPos.x = screenSize.x - halfSize.x;
-                newVel.x = 0f;
-                force.x = -bounce;
-                outside = true;
-            }
-            else if (Position.x - halfSize.x < -screenSize.x)
-            {
-                newPos.x = -screenSize.x + halfSize.x;
-                newVel.x = 0f;
-                force.x = bounce;
-                outside = true;
-            }
-            
-            if (Position.y + halfSize.y > screenSize.y)
-            {
-                newPos.y = screenSize.y - halfSize.y;
-                newVel.y = 0f;
-                force.y = -bounce;
-                outside = true;
-            }
-            else if (Position.y - halfSize.y < -screenSize.y)
-            {
-                newPos.y = -screenSize.y + halfSize.y;
-                newVel.y = 0f;
-                force.y = bounce;
-                outside = true;
-            }
-
-            if (outside == false) return;
-
-            rb.MovePosition(newPos);
-            rb.velocity = newVel;
-            rb.AddForce(force);
         }
     }
 }

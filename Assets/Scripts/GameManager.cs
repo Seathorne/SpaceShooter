@@ -21,12 +21,14 @@ namespace Assets.Scripts
             y = Vector2.Distance(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)), Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height))) * 0.5f,
         };
 
-        /// <summary>
-        /// Use this for initialization.
-        /// </summary>
-        private void Start()
-        {
+        public static Ship Player { get; private set; }
 
+        public static BulletGenerator BulletGenerator { get; private set; }
+
+        private void Awake()
+        {
+            Player = FindObjectOfType<Player>();
+            BulletGenerator = FindObjectOfType<BulletGenerator>();
         }
 
         /// <summary>
@@ -70,7 +72,7 @@ namespace Assets.Scripts
             Application.Quit();
         }
 
-        public static void UpdateScore(Ship killed)
+        public static void UpdateScore(Ship prefab)
         {
             // TODO
             Score += 1;
