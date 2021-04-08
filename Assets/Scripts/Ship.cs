@@ -60,15 +60,13 @@ namespace Assets.Scripts
 
         public BulletFactory BulletFactory { get; protected set; }
 
-        public Rigidbody2D Rb { get; private set; }
-
         [field: SerializeField, Range(0, 100)] public int MaxBulletCount { get; protected set; }
 
         [field: SerializeField, Range(0f, 10f)] public float ShootTime { get; protected set; }
 
         protected void Start()
         {
-            Rb = GetComponent<Rigidbody2D>();
+            Died += () => GameManager.UpdateScore(prefab);
         }
 
         protected void Update()
@@ -124,10 +122,15 @@ namespace Assets.Scripts
 
                 if (Health <= 0f)
                 {
-                    Died?.Invoke();
-                    Destroy(gameObject);
+                    Die();
                 }
             }
+        }
+
+        public void Die()
+        {
+            Died?.Invoke();
+            Destroy(gameObject);
         }
 
         protected void StayInBounds()

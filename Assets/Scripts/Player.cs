@@ -22,7 +22,10 @@ namespace Assets.Scripts
         {
             base.Start();
 
-            SetWeapon(GameManager.BulletGenerator.ShootBasic, GameManager.BulletGenerator.BasicBulletArgs);
+            var generator = GameManager.Instance.bulletGenerator;
+            SetWeapon(generator.ShootBasic, generator.BasicBulletArgs);
+
+            Died += () => GameManager.Restart();
         }
 
         protected new void Update()

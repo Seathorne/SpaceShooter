@@ -6,11 +6,10 @@
         {
             base.Start();
 
-            SetWeapon(GameManager.BulletGenerator.ShootBasic, GameManager.BulletGenerator.BasicBulletArgs);
+            var generator = GameManager.Instance.bulletGenerator;
+            SetWeapon(generator.ShootBasic, generator.BasicBulletArgs);
 
-            Behaviors += () => ShipExt.Face(this, GameManager.Player);
-
-            Died += () => GameManager.UpdateScore(prefab);
+            Behaviors += () => ShipExt.Face(this, GameManager.Instance.player);
             Died += () => GameManager.SpawnAnother(prefab);
         }
 

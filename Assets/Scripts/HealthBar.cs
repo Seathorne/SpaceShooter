@@ -1,20 +1,10 @@
 using Assets.Scripts;
 
-using System.Linq;
-
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-    public const string HealthBarForegroundTag = "HealthBarForeground";
-
     public GameObject foreground;
-
-    public void Start()
-    {
-        //print(GetComponents<MonoBehaviour>());
-        //foreground = GetComponents<MonoBehaviour>().First(x => x.CompareTag(HealthBarForegroundTag));
-    }
 
     public void UpdateSize(Ship ship)
     {
