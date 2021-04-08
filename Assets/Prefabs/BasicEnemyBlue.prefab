@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198743788118100289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.1, y: -1.73, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,8 @@ MonoBehaviour:
   prefab: {fileID: 4198743788118100288}
   <MaxSpeed>k__BackingField: 10
   <MaxRotation>k__BackingField: 5
-  <Health>k__BackingField: 5
+  <MaxHealth>k__BackingField: 5
+  _Health: 5
   <Defense>k__BackingField: 0
   <MaxBulletCount>k__BackingField: 10
   <ShootTime>k__BackingField: 3

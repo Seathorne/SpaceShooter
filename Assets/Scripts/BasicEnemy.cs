@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Assets.Scripts
+﻿namespace Assets.Scripts
 {
     public class BasicEnemy : Ship
     {
@@ -12,9 +10,8 @@ namespace Assets.Scripts
 
             Behaviors += () => ShipExt.Face(this, GameManager.Player);
 
-            Died += (sender, args) => GameManager.UpdateScore(prefab);
-            Died += (sender, args) => GameManager.SpawnAnother(prefab);
-            Died += (sender, args) => Destroy(gameObject);
+            Died += () => GameManager.UpdateScore(prefab);
+            Died += () => GameManager.SpawnAnother(prefab);
         }
 
         protected new void Update()

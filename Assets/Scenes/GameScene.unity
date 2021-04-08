@@ -294,7 +294,8 @@ MonoBehaviour:
   prefab: {fileID: 0}
   <MaxSpeed>k__BackingField: 50
   <MaxRotation>k__BackingField: 15
-  <Health>k__BackingField: 100
+  <MaxHealth>k__BackingField: 100
+  _Health: 100
   <Defense>k__BackingField: 0
   <MaxBulletCount>k__BackingField: 50
   <ShootTime>k__BackingField: 0.1
@@ -516,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48188e308080bf4439a6d26ff1263f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 5254179332999496586, guid: e0c2d06ebe688794592a763ffe932ca8, type: 3}
 --- !u!1 &1679422086
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,11 +582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4198743788118100302, guid: 1b4a6979f7fff3d4ca9928f72d37dd1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.1
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4198743788118100302, guid: 1b4a6979f7fff3d4ca9928f72d37dd1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.73
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4198743788118100302, guid: 1b4a6979f7fff3d4ca9928f72d37dd1e, type: 3}
       propertyPath: m_LocalPosition.z

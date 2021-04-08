@@ -24,13 +24,29 @@ namespace Assets.Scripts
 
         [field: SerializeField, Range(0f, 360f)] public float MaxRotation { get; protected set; }
 
-        [field: SerializeField, Range(0f, 100f)] public float Health { get; protected set; }
+        [field: SerializeField, Range(0f, 100f)] public float MaxHealth { get; protected set; }
+
+        [SerializeField, Range(0f, 100f)] private float _Health;
+
+        public float Health
+        {
+            get => _Health;
+            set
+            {
+                _Health = value;
+                HealthChanged?.Invoke();
+            }
+        }
 
         [field: SerializeField, Range(0f, 100f)] public float Defense { get; protected set; }
 
-        public event Action Behaviors = null;
+        public event Action Behaviors;
 
-        public event EventHandler Died = null;
+        public event Action Moved;
+
+        public event Action HealthChanged;
+
+        public event Action Died;
 
         public static Bullet[] Bullets => FindObjectsOfType<Bullet>();
 
@@ -67,6 +83,7 @@ namespace Assets.Scripts
                 Behaviors?.Invoke();
                 UpdateMove();
                 UpdateRotate();
+                Moved?.Invoke();
             }
         }
 
@@ -104,9 +121,11 @@ namespace Assets.Scripts
             if (damage > 0f)
             {
                 Health -= damage;
+
                 if (Health <= 0f)
                 {
-                    Died?.Invoke(this, null);
+                    Died?.Invoke();
+                    Destroy(gameObject);
                 }
             }
         }

@@ -8,6 +8,8 @@ namespace Assets.Scripts
     /// </summary>
     public class GameManager : MonoBehaviour
     {
+        public HealthBar healthBarPrefab;
+
         /// <summary>
         /// Whether the game is currently paused.
         /// </summary>
@@ -25,10 +27,21 @@ namespace Assets.Scripts
 
         public static BulletGenerator BulletGenerator { get; private set; }
 
+        public static HealthBar HealthBarPrefab { get; private set; }
+
         private void Awake()
         {
             Player = FindObjectOfType<Player>();
             BulletGenerator = FindObjectOfType<BulletGenerator>();
+            HealthBarPrefab = healthBarPrefab;
+        }
+
+        private void Start()
+        {
+            foreach (var ship in FindObjectsOfType<Ship>())
+            {
+                CreateHealthBar(ship);
+            }
         }
 
         /// <summary>
@@ -82,6 +95,7 @@ namespace Assets.Scripts
         public static void SpawnAnother(Ship prefab)
         {
             var ship = Instantiate(prefab);
+            ship.Health = prefab.MaxHealth;
 
             (float x, float y) halfSize = (0.5f, 0.5f);
 
@@ -90,6 +104,16 @@ namespace Assets.Scripts
                 x = Random.Range(-HalfScreenSize.x + halfSize.x, HalfScreenSize.x - halfSize.x),
                 y = Random.Range(-HalfScreenSize.y + halfSize.y, HalfScreenSize.y - halfSize.y)
             };
+
+            CreateHealthBar(ship);
+        }
+
+        private static void CreateHealthBar(Ship ship)
+        {
+            var health = Instantiate(HealthBarPrefab);
+            ship.Moved += () => health.UpdatePosition(ship);
+            ship.HealthChanged += () => health.UpdateSize(ship);
+            ship.Died += () => Destroy(health.gameObject);
         }
     }
 }
