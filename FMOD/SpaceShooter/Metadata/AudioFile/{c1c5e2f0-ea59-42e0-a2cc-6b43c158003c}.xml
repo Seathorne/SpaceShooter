@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c1c5e2f0-ea59-42e0-a2cc-6b43c158003c}">
+		<property name="assetPath">
+			<value>Sub Bass F.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dd7e5c9b-7546-475a-b0e0-d868cace6abe}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -136,5 +136,11 @@ namespace Assets.Scripts
         }
 
         public static Vector2 RotateBy(this Vector2 vector, float degrees) => Quaternion.AngleAxis(degrees, Vector2.up) * vector;
+
+        public static IEnumerator CoroutineDelay(float delay, Action action)
+        {
+            yield return new WaitForSeconds(delay);
+            action?.Invoke();
+        }
     }
 }

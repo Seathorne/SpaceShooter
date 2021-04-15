@@ -103,9 +103,13 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 10
   <CollisionDamage>k__BackingField: 2
   _Health: 0
+  BulletHitEvent: event:/Effects/BulletHit
   <Defense>k__BackingField: 0
   <MaxBulletCount>k__BackingField: 0
   <ShootTime>k__BackingField: 0
+  CollideEvent: event:/Effects/Collide
+  ExplodeEvent: event:/Effects/Explode
+  GameEndEvent: event:/Effects/GameEnd
   sprites:
   - {fileID: -5766033097715662417, guid: d471ea6267a8d7848b518e14d5f608d1, type: 3}
   - {fileID: 3577993227607710454, guid: d471ea6267a8d7848b518e14d5f608d1, type: 3}

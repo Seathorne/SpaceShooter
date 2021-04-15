@@ -18,12 +18,18 @@ namespace Assets.Scripts
 
         [field: SerializeField, Range(0f, 360f)] public float AngularThrottle { get; protected set; }
 
+        [SerializeField, Range(0f, 10f)] private float healthRegenTime;
+
+        private float lastHealthRegenTime;
+
         protected new void Start()
         {
             base.Start();
 
             var generator = GameManager.Instance.bulletGenerator;
             SetWeapon(generator.ShootBasic, generator.BasicBulletArgs);
+
+            lastHealthRegenTime = Time.time;
 
             Died += () => GameManager.Restart();
         }
@@ -37,7 +43,25 @@ namespace Assets.Scripts
                 {
                     TryShoot();
                 }
+
+                UpdateSpeedSound();
+
+                if (Time.time -lastHealthRegenTime > healthRegenTime)
+                {
+                    Health = Mathf.Min(Health + 1f, MaxHealth);
+                    lastHealthRegenTime = Time.time;
+                }
             }
+        }
+
+        private void UpdateSpeedSound()
+        {
+            var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+            var rb = GetComponent<Rigidbody2D>();
+
+            float realMaxSpeed = 13f; // TODO max speed currently limited by drag
+            float effectiveSpeed = Mathf.InverseLerp(0f, realMaxSpeed, rb.velocity.magnitude);
+            emitter.SetParameter("Speed", effectiveSpeed);
         }
 
         protected override void UpdateMove()

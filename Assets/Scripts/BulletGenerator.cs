@@ -13,6 +13,9 @@ namespace Assets.Scripts
         [Header("Presets")]
         [SerializeField] public BulletArgs BasicBulletArgs;
 
+        [FMODUnity.EventRef] public string PlayerShootEvent;
+        [FMODUnity.EventRef] public string EnemyShootEvent;
+
         public IEnumerable<Bullet> ShootBasic(Ship source, BulletArgs args)
         {
             var bullet = Instantiate(basicBulletPrefab);
@@ -24,6 +27,8 @@ namespace Assets.Scripts
             var rb = bullet.GetComponent<Rigidbody2D>();
             var sourceRb = source.GetComponent<Rigidbody2D>();
             rb.velocity = source.Facing * args.Speed + sourceRb.velocity;
+
+            FMODUnity.RuntimeManager.PlayOneShot((source is Player) ? PlayerShootEvent : EnemyShootEvent, source.transform.position);
 
             return new Bullet[] { bullet };
         }

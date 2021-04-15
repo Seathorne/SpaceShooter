@@ -103,9 +103,13 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 5
   <CollisionDamage>k__BackingField: 1
   _Health: 5
+  BulletHitEvent: event:/Effects/BulletHit
   <Defense>k__BackingField: 0
   <MaxBulletCount>k__BackingField: 10
   <ShootTime>k__BackingField: 3
+  CollideEvent: event:/Effects/Collide
+  ExplodeEvent: event:/Effects/Explode
+  GameEndEvent: event:/Effects/GameEnd
 --- !u!50 &4198743788118100301
 Rigidbody2D:
   serializedVersion: 4

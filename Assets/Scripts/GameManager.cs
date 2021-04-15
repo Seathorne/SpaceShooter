@@ -23,12 +23,16 @@ namespace Assets.Scripts
         private float lastAsteroidTime;
         [SerializeField, Range(0f, 60f)] private float asteroidSpawnTime;
         [SerializeField] private AnimationCurve asteroidSpawnTimeCurve;
-        [SerializeField, Range(0f, 10f)] private float maxAsteroidCount;
+        [SerializeField, Range(0f, 10f)] private int maxAsteroidCount;
 
-        [SerializeField, Range(0f, 10f)] private float maxShipCount;
+        [SerializeField, Range(0f, 10f)] private int maxShipCount;
 
         public const string HighScore = "HighScore";
         public const string GameScene = "GameScene";
+
+        [FMODUnity.EventRef] public string GameStartEvent;
+        [FMODUnity.EventRef] public string EnemySpawnEvent;
+        [FMODUnity.EventRef] public string PauseEvent;
 
         /// <summary>
         /// Whether the game is currently paused.
@@ -56,9 +60,10 @@ namespace Assets.Scripts
             {
                 CreateHealthBar(ship);
             }
-            SpawnAnother(basicEnemyPrefab);
 
             UpdateScore(null);
+
+            FMODUnity.RuntimeManager.PlayOneShot(GameStartEvent);
         }
 
         /// <summary>
@@ -81,6 +86,10 @@ namespace Assets.Scripts
             if (!IsPaused)
             {
                 TrySpawnAsteroid();
+                if (FindObjectsOfType<BasicEnemy>().Length == 0)
+                {
+                    SpawnAnother(basicEnemyPrefab);
+                }
             }
         }
 
@@ -90,6 +99,7 @@ namespace Assets.Scripts
         /// <param name="setPaused"><see langword="true"/> to pause the game; <see langword="false"/> to unpause.</param>
         public static void Pause(bool setPaused = true)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(Instance.PauseEvent);
             Time.timeScale = setPaused ? 0f : 1f;
             IsPaused = setPaused;
         }
@@ -99,8 +109,13 @@ namespace Assets.Scripts
         /// </summary>
         public static void Restart()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(GameScene);
-            Score = 0;
+            Instance.StartCoroutine(
+                Utility.CoroutineDelay(5f,
+                () =>
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(GameScene);
+                    Score = 0;
+                }));
         }
 
         /// <summary>
@@ -212,12 +227,12 @@ namespace Assets.Scripts
         {
             if (Score < 10)
             {
-                Instance.maxAsteroidCount = 2;
+                Instance.maxAsteroidCount = 3;
                 Instance.maxShipCount = 1;
             }
             else if (Score < 20)
             {
-                Instance.maxAsteroidCount = 3;
+                Instance.maxAsteroidCount = 4;
                 Instance.maxShipCount = 2;
             }
             else if (Score < 50)
@@ -227,23 +242,46 @@ namespace Assets.Scripts
             }
             else if (Score < 100)
             {
-                Instance.maxAsteroidCount = 5;
+                Instance.maxAsteroidCount = 4;
                 Instance.maxShipCount = 4;
             }
             else
             {
-                Instance.maxAsteroidCount = 2 + (Score / 25);
+                Instance.maxAsteroidCount = 4 + (Score / 75);
                 Instance.maxShipCount = 3 + (Score / 50);
             }
 
-            for (int i = FindObjectsOfType<BasicEnemy>().Length; i <= Instance.maxShipCount; i++)
+            int enemies = FindObjectsOfType(prefab.GetType()).Length - (prefab.isActiveAndEnabled ? 1 : 0);
+            int margin = Instance.maxShipCount - enemies;
+            float prop = (margin > 1 || enemies < 1)
+                ? 1f
+                : margin / Instance.maxShipCount;
+
+            int count = 0;
+            for (int i = 0; i < margin; i++)
+            {
+                if (Random.value < prop)
+                {
+                    count++;
+                }
+            }
+
+            for (int i = 0; i < count; i++)
             {
                 var ship = Instantiate(prefab);
                 ship.Health = prefab.MaxHealth;
-
                 ship.transform.position = ScreenEdgePosition(new Vector2(-1f, -1f));
+                ship.enabled = false;
 
-                CreateHealthBar(ship);
+                Instance.StartCoroutine(
+                    Utility.CoroutineDelay(Random.Range(0f, Instance.maxShipCount * 2f),
+                    () =>
+                    {
+                        if (ship == null) return;
+                        FMODUnity.RuntimeManager.PlayOneShot(Instance.EnemySpawnEvent, ship.transform.position);
+                        ship.enabled = true;
+                        CreateHealthBar(ship);
+                    }));
             }
         }
 

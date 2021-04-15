@@ -30,6 +30,8 @@ namespace Assets.Scripts
 
         [SerializeField, Range(0f, 100f)] private float _Health;
 
+        [FMODUnity.EventRef] public string BulletHitEvent;
+
         public float Health
         {
             get => _Health;
@@ -65,6 +67,10 @@ namespace Assets.Scripts
         [field: SerializeField, Range(0, 100)] public int MaxBulletCount { get; protected set; }
 
         [field: SerializeField, Range(0f, 10f)] public float ShootTime { get; protected set; }
+
+        [FMODUnity.EventRef] public string CollideEvent;
+        [FMODUnity.EventRef] public string ExplodeEvent;
+        [FMODUnity.EventRef] public string GameEndEvent;
 
         protected void Start()
         {
@@ -119,12 +125,15 @@ namespace Assets.Scripts
 
         public virtual void HitBy(Bullet bullet)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(BulletHitEvent, bullet.transform.position);
             TakeDamage(bullet.Damage);
         }
 
-        public virtual void HitBy(Ship ship)
+        public virtual float HitBy(Ship ship)
         {
-            TakeDamage(ship.CollisionDamage * (1f + 0.15f * ship.GetComponent<Rigidbody2D>().velocity.magnitude));
+            float damage = ship.CollisionDamage * (1f + 0.15f * ship.GetComponent<Rigidbody2D>().velocity.magnitude);
+            TakeDamage(damage);
+            return damage;
         }
 
         private void TakeDamage(float preDefenseDamage)
@@ -145,13 +154,43 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.GetComponent<Ship>() is Ship ship)
             {
-                this.HitBy(ship);
-                ship.HitBy(this);
+                float incomingDamage = this.HitBy(ship);
+                float outgoingDamage = ship.HitBy(this);
+
+                // Prepare collision sound
+                (float damage, Ship faster) = (incomingDamage > outgoingDamage)
+                    ? (incomingDamage, ship)
+                    : (outgoingDamage, this);
+
+                var rb = faster.GetComponent<Rigidbody2D>();
+
+                float realMaxSpeed = 13f; // TODO max speed currently limited by drag
+                float param = Mathf.InverseLerp(0f, realMaxSpeed, rb.velocity.magnitude);
+
+                FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(CollideEvent);
+                sound.setParameterByName("Speed", param);
+                sound.start();
+                sound.release();
             }
         }
 
         public void Die()
         {
+            float distance = (this is Player)
+                ? 0f
+                : Vector2.Distance(transform.position, GameManager.Instance.player.transform.position);
+            float param = Mathf.InverseLerp(0f, GameManager.HalfScreenSize.x * 2f, distance);
+
+            FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(ExplodeEvent);
+            sound.setParameterByName("Distance", param);
+            sound.start();
+            sound.release();
+
+            if (this is Player)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(GameEndEvent);
+            }
+
             Health = 0f;
             Died?.Invoke();
             Destroy(gameObject);

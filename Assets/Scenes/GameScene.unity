@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 809365499}
   - component: {fileID: 809365498}
   - component: {fileID: 809365502}
+  - component: {fileID: 809365503}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -461,13 +462,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   <MaxSpeed>k__BackingField: 50
-  <MaxRotation>k__BackingField: 15
+  <MaxRotation>k__BackingField: 80
   <MaxHealth>k__BackingField: 50
   <CollisionDamage>k__BackingField: 1
   _Health: 50
+  BulletHitEvent: event:/Effects/BulletHit
   <Defense>k__BackingField: 0
   <MaxBulletCount>k__BackingField: 50
   <ShootTime>k__BackingField: 0.1
+  CollideEvent: event:/Effects/Collide
+  ExplodeEvent: event:/Effects/Explode
+  GameEndEvent: event:/Effects/GameEnd
   LinearThrottleCurve:
     serializedVersion: 2
     m_Curve:
@@ -543,6 +548,7 @@ MonoBehaviour:
   <LinearThrottle>k__BackingField: 25
   <LinearBrake>k__BackingField: 0
   <AngularThrottle>k__BackingField: 10
+  healthRegenTime: 4
 --- !u!212 &809365500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -643,6 +649,31 @@ PolygonCollider2D:
       - {x: -3.15, y: -1}
       - {x: -1.3, y: 0.5}
       - {x: -1.3, y: 4}
+--- !u!114 &809365503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809365497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Effects/Thrust
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Speed
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1117174013
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +840,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1370782996}
   - component: {fileID: 1370782997}
+  - component: {fileID: 1370782998}
+  - component: {fileID: 1370782999}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -882,8 +915,48 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxAsteroidCount: 2
+  maxAsteroidCount: 0
   maxShipCount: 0
+  GameStartEvent: event:/Effects/GameStart
+  EnemySpawnEvent: event:/Effects/EnemySpawn
+  PauseEvent: event:/UI/Pause
+--- !u!114 &1370782998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370782995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
+--- !u!114 &1370782999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370782995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Music/Background
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1679422086
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,3 +1004,5 @@ MonoBehaviour:
   BasicBulletArgs:
     <Speed>k__BackingField: 10
     <Damage>k__BackingField: 1
+  PlayerShootEvent: event:/Effects/PlayerShoot
+  EnemyShootEvent: event:/Effects/EnemyShoot
