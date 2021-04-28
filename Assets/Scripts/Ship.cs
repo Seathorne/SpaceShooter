@@ -72,6 +72,10 @@ namespace Assets.Scripts
         [FMODUnity.EventRef] public string ExplodeEvent;
         [FMODUnity.EventRef] public string GameEndEvent;
 
+        private bool paused;
+        private Vector2 velocity;
+        private float angular;
+
         protected void Start()
         {
             Died += () => GameManager.UpdateScore(prefab);
@@ -81,7 +85,27 @@ namespace Assets.Scripts
 
         protected void Update()
         {
+            if (!paused && GameManager.IsPaused)
+            {
+                var rb = GetComponent<Rigidbody2D>();
 
+                paused = true;
+                velocity = rb.velocity;
+                angular = rb.angularVelocity;
+
+                rb.velocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+
+                return;
+            }
+            else if (paused && !GameManager.IsPaused)
+            {
+                var rb = GetComponent<Rigidbody2D>();
+
+                paused = false;
+                rb.velocity = velocity;
+                rb.angularVelocity = angular;
+            }
         }
 
         protected void FixedUpdate()

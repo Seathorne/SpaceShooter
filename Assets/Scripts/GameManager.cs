@@ -29,6 +29,7 @@ namespace Assets.Scripts
 
         public const string HighScore = "HighScore";
         public const string GameScene = "GameScene";
+        public const string TitleScene = "TitleScene";
 
         [FMODUnity.EventRef] public string GameStartEvent;
         [FMODUnity.EventRef] public string EnemySpawnEvent;
@@ -56,6 +57,15 @@ namespace Assets.Scripts
 
         private void Start()
         {
+            IsPaused = true;
+            Score = 0;
+            Instance.StartCoroutine(Utility.CoroutineDelay(1f, StartGame));
+        }
+
+        private void StartGame()
+        {
+            IsPaused = false;
+
             foreach (var ship in FindObjectsOfType<Ship>())
             {
                 CreateHealthBar(ship);
@@ -109,13 +119,7 @@ namespace Assets.Scripts
         /// </summary>
         public static void Restart()
         {
-            Instance.StartCoroutine(
-                Utility.CoroutineDelay(5f,
-                () =>
-                {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(GameScene);
-                    Score = 0;
-                }));
+            Instance.StartCoroutine(Utility.CoroutineDelay(5f, () => UnityEngine.SceneManagement.SceneManager.LoadScene(TitleScene)));
         }
 
         /// <summary>

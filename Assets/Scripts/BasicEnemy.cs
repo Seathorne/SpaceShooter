@@ -14,9 +14,10 @@
             Died += () => GameManager.SpawnAnother(prefab);
         }
 
-        protected new void Update()
+        protected new void FixedUpdate()
         {
-            base.Update();
+            base.FixedUpdate();
+
             if (!GameManager.IsPaused)
             {
                 TryShoot();
