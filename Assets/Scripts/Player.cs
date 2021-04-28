@@ -39,7 +39,7 @@ namespace Assets.Scripts
             base.Update();
             if (!GameManager.IsPaused)
             {
-                if (Input.GetButton(Controls.ShootButton))
+                if (!VirtualKey.Accelerate.IsHeld() && Input.GetButton(Controls.ShootButton))
                 {
                     TryShoot();
                 }

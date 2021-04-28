@@ -35,6 +35,9 @@ namespace Assets.Scripts
         [FMODUnity.EventRef] public string EnemySpawnEvent;
         [FMODUnity.EventRef] public string PauseEvent;
 
+        [SerializeField] private GameObject[] pausedObjects;
+        [SerializeField] private MenuManager menu;
+
         /// <summary>
         /// Whether the game is currently paused.
         /// </summary>
@@ -84,10 +87,20 @@ namespace Assets.Scripts
             if (VirtualKey.Pause.JustPressed() && !IsPaused)
             {
                 IsPaused = true;
+                foreach (var obj in Instance.pausedObjects)
+                {
+                    obj.SetActive(true);
+                }
+                menu.Deselect();
             }
             else if (VirtualKey.Unpause.JustPressed() && IsPaused)
             {
                 IsPaused = false;
+                foreach (var obj in Instance.pausedObjects)
+                {
+                    obj.SetActive(false);
+                }
+                menu.Deselect();
             }
         }
 
@@ -139,7 +152,7 @@ namespace Assets.Scripts
             }
             else if (prefab is BasicEnemy)
             {
-                points = 3;
+                points = (int)prefab.MaxHealth;
             }
 
             Score += points;

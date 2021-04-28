@@ -110,6 +110,10 @@ MonoBehaviour:
   CollideEvent: event:/Effects/Collide
   ExplodeEvent: event:/Effects/Explode
   GameEndEvent: event:/Effects/GameEnd
+  sprites:
+  - {fileID: 21300000, guid: cdaee6d3da285264f919d47198eba533, type: 3}
+  - {fileID: 21300000, guid: 6e87ec4ea4ac27b48ba2b0c7693d8932, type: 3}
+  - {fileID: 21300000, guid: 1838c0a4954d62048969dcf576823ae2, type: 3}
 --- !u!50 &4198743788118100301
 Rigidbody2D:
   serializedVersion: 4

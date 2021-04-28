@@ -6,6 +6,14 @@ public class HealthBar : MonoBehaviour
 {
     public GameObject foreground;
 
+    private void Update()
+    {
+        if (GameManager.Instance.player.Health <= 0f)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void UpdateSize(Ship ship)
     {
         // Set red part of bar

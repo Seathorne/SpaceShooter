@@ -7,6 +7,7 @@ namespace Assets.Scripts
     public class MenuManager : MonoBehaviour
     {
         [SerializeField] private ImageButton[] buttons;
+        [SerializeField] private GameObject[] controls;
 
         private int i = 0;
 
@@ -43,7 +44,20 @@ namespace Assets.Scripts
 
             if (VirtualKey.Accept.JustPressed())
             {
-                buttons[i].OnMouseUpAsButton();
+                if (i >= 0 && i < buttons.Length)
+                {
+                    buttons[i].OnMouseUpAsButton();
+                }
+            }
+        }
+
+        public void Deselect() => i = -1;
+
+        public void ToggleControls()
+        {
+            foreach (var obj in controls)
+            {
+                obj.SetActive(!obj.activeSelf);
             }
         }
     }

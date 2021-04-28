@@ -16,3 +16,742 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002A9B0B83D08
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Galactica - C2 - 1', format=5, channels=2, frequency=48000, lengthbytes=14144, lengthpcm=42910, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002A9B0B83D08
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Galactica - C1 - 1', format=5, channels=2, frequency=48000, lengthbytes=10368, lengthpcm=42631, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002A9B0B83D08
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Galactica - C5 - 1', format=5, channels=2, frequency=48000, lengthbytes=11520, lengthpcm=42074, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002A9B0B838E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Alien Warning FX', format=5, channels=2, frequency=48000, lengthbytes=7680, lengthpcm=31030, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.779196.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CB58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Hard Wobble', format=5, channels=2, frequency=48000, lengthbytes=22272, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891251.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CB58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='E-Perc 7', format=5, channels=1, frequency=48000, lengthbytes=1696, lengthpcm=9052, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988007.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CB58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Electroflow - C1', format=5, channels=1, frequency=48000, lengthbytes=8512, lengthpcm=55226, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA65A5FC48 : node = 000002AA1EF744C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5FC48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5F228 : node = 000002AA1EF74380
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF745D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 204
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5F738 : node = 000002AA1EF73FC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002A9AFFFCA98 : node = 000002AA1EF74600
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rubiks Cube Metronome', format=5, channels=2, frequency=48000, lengthbytes=193536, lengthpcm=901974, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848999.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5FC48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5F228
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74490
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drumming Fingers', format=5, channels=2, frequency=48000, lengthbytes=147936, lengthpcm=645494, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403900.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5F228
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5F738
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF740D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 204
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rubiks Cube Metronome', format=5, channels=2, frequency=48000, lengthbytes=193536, lengthpcm=901974, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848999.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5F738
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A9AFFFCA98
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74710
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drumming Fingers', format=5, channels=2, frequency=48000, lengthbytes=147936, lengthpcm=645494, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403900.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A9AFFFCA98
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CB58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Kick 90s 3', format=5, channels=2, frequency=48000, lengthbytes=3488, lengthpcm=10260, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CB58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Water Drip 07', format=5, channels=2, frequency=48000, lengthbytes=3840, lengthpcm=16499, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.347046.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CB58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Water Drip 06', format=5, channels=2, frequency=48000, lengthbytes=3904, lengthpcm=18000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.766144.
+[LOG] SoundI::release                          : Drumming Fingers (000002A9AFFFCA98)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA26D22DC8)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA22B1AD68)
+[LOG] SoundI::release                          : Drumming Fingers (000002AA65A5F228)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA22C38258)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA1B06EC48)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CF78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Woodchips', format=5, channels=2, frequency=48000, lengthbytes=54656, lengthpcm=228000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.537231.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DACBFEF0F8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF3737B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF3737AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF3737BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF3737CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002AA60A6CF78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Running Along Bench', format=5, channels=2, frequency=48000, lengthbytes=53024, lengthpcm=240000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.582275.
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA1B2FA2F8 : node = 000002AA1EF73C00
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA1B2FA2F8
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA1B2F9DE8 : node = 000002AA1EF73D40
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73D10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23031
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='39-14 Space,Ship Space Ship Crash Lands', format=5, channels=2, frequency=48000, lengthbytes=257824, lengthpcm=1337600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.270935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA1B2FA2F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA1B2F9DE8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73E50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 348
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='40-25 Explosion Large Explosion 2', format=5, channels=2, frequency=48000, lengthbytes=228608, lengthpcm=1348480, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA1B2F9DE8
+[LOG] SoundI::release                          : Rubiks Cube Metronome (000002AA65A5F738)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA22C380B8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA1B06E228)
+[LOG] SoundI::release                          : Rubiks Cube Metronome (000002AA65A5FC48)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA22C38598)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA1B06EA98)
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA65A881C8 : node = 000002AA1EF73FC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A881C8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A88528 : node = 000002AA1EF73AC0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF740D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 204
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rubiks Cube Metronome', format=5, channels=2, frequency=48000, lengthbytes=193536, lengthpcm=901974, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848999.
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5F3D8 : node = 000002AA1EF73E80
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002A9AFFFC228 : node = 000002AA1EF74100
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 2
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A881C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A88528
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73BD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drumming Fingers', format=5, channels=2, frequency=48000, lengthbytes=147936, lengthpcm=645494, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403900.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A88528
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5F3D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73F90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 204
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rubiks Cube Metronome', format=5, channels=2, frequency=48000, lengthbytes=193536, lengthpcm=901974, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848999.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5F3D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A9AFFFC228
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74210
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drumming Fingers', format=5, channels=2, frequency=48000, lengthbytes=147936, lengthpcm=645494, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403900.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A9AFFFC228
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A9B1666588 : node = 000002AA1EF73980
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A9B1666588
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 000002A9B16663D8 : node = 000002AA1EF74240
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73A90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23031
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='39-14 Space,Ship Space Ship Crash Lands', format=5, channels=2, frequency=48000, lengthbytes=257824, lengthpcm=1337600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.270935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A9B1666588
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A9B16663D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74350
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 348
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='40-25 Explosion Large Explosion 2', format=5, channels=2, frequency=48000, lengthbytes=228608, lengthpcm=1348480, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A9B16663D8
+[LOG] SoundI::release                          : Drumming Fingers (000002A9AFFFC228)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA260C5758)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA22B1B0C8)
+[LOG] SoundI::release                          : Drumming Fingers (000002AA65A88528)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA260C5A98)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA22B1AD68)
+[LOG] SoundI::release                          : 40-25 Explosion Large Explosion 2 (000002AA1B2F9DE8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA260C62B8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA22B1AA08)
+[LOG] SoundI::release                          : 39-14 Space,Ship Space Ship Crash Lands (000002AA1B2FA2F8)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22C38258)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22B1A858)
+[LOG] SoundI::release                          : Rubiks Cube Metronome (000002AA65A5F3D8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA260C55B8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA22B1AF18)
+[LOG] SoundI::release                          : Rubiks Cube Metronome (000002AA65A881C8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA260C5C38)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA22B1A348)
+[LOG] SoundI::release                          : 40-25 Explosion Large Explosion 2 (000002A9B16663D8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA260C5DD8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA1B9372D8)
+[LOG] SoundI::release                          : 39-14 Space,Ship Space Ship Crash Lands (000002A9B1666588)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA260C58F8)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22B1A4F8)
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA260C55B8 : node = 000002AA1EF73E80
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA260C55B8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA1F2FFCC8 : node = 000002AA1EF74380
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73F90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23031
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='39-14 Space,Ship Space Ship Crash Lands', format=5, channels=2, frequency=48000, lengthbytes=257824, lengthpcm=1337600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.270935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA260C55B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA1F2FFCC8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74490
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 348
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='40-25 Explosion Large Explosion 2', format=5, channels=2, frequency=48000, lengthbytes=228608, lengthpcm=1348480, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA1F2FFCC8
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA1F2FF7B8 : node = 000002AA1EF744C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA1F2FF7B8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA1F2FFB18 : node = 000002AA1EF74600
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF745D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 204
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rubiks Cube Metronome', format=5, channels=2, frequency=48000, lengthbytes=193536, lengthpcm=901974, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848999.
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5F588 : node = 000002AA1EF73980
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5F8E8 : node = 000002AA1EF73C00
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 2
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA1F2FF7B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA1F2FFB18
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74710
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5FC48 : node = 000002AA1EF74100
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 2
+[LOG] SystemI::createSound                     :     filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA26A3FBB8 : node = 000002AA1EF73AC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 3
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drumming Fingers', format=5, channels=2, frequency=48000, lengthbytes=147936, lengthpcm=645494, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403900.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA1F2FFB18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5F588
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73A90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23031
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='39-14 Space,Ship Space Ship Crash Lands', format=5, channels=2, frequency=48000, lengthbytes=257824, lengthpcm=1337600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.270935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5F588
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5F8E8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73D10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 348
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='40-25 Explosion Large Explosion 2', format=5, channels=2, frequency=48000, lengthbytes=228608, lengthpcm=1348480, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5F8E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5FC48
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74210
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 204
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rubiks Cube Metronome', format=5, channels=2, frequency=48000, lengthbytes=193536, lengthpcm=901974, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.848999.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5FC48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA26A3FBB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73BD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Drumming Fingers', format=5, channels=2, frequency=48000, lengthbytes=147936, lengthpcm=645494, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403900.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA26A3FBB8
+[LOG] SoundI::release                          : Drumming Fingers (000002AA26A3FBB8)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA65A889E8)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA22B1AA08)
+[LOG] SoundI::release                          : Drumming Fingers (000002AA1F2FFB18)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA65A88EC8)
+[LOG] SoundI::release                          :     Drumming Fingers (000002AA1B9377E8)
+[LOG] SoundI::release                          : Rubiks Cube Metronome (000002AA65A5FC48)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA65A886A8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA22B1B0C8)
+[LOG] SoundI::release                          : Rubiks Cube Metronome (000002AA1F2FF7B8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA22C380B8)
+[LOG] SoundI::release                          :     Rubiks Cube Metronome (000002AA1B937CF8)
+[LOG] SoundI::release                          : 40-25 Explosion Large Explosion 2 (000002AA1F2FFCC8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA22C38598)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA1B937B48)
+[LOG] SoundI::release                          : 40-25 Explosion Large Explosion 2 (000002AA65A5F8E8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA65A88848)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA1B937488)
+[LOG] SoundI::release                          : 39-14 Space,Ship Space Ship Crash Lands (000002AA260C55B8)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22C38258)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA1B9372D8)
+[LOG] SoundI::release                          : 39-14 Space,Ship Space Ship Crash Lands (000002AA65A5F588)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA65A88B88)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA1B937EA8)
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA65A5F078 : node = 000002AA1EF744C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5F078
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA65A5FA98 : node = 000002AA1EF74600
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF745D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23031
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='39-14 Space,Ship Space Ship Crash Lands', format=5, channels=2, frequency=48000, lengthbytes=257824, lengthpcm=1337600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.270935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5F078
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA65A5FA98
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF74710
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 348
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='40-25 Explosion Large Explosion 2', format=5, channels=2, frequency=48000, lengthbytes=228608, lengthpcm=1348480, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA65A5FA98
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA39DF1868 : node = 000002AA1EF73E80
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Effects.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA39DF1868
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSound                     :     setdata soundi = 000002AA39DF20D8 : node = 000002AA1EF73980
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73F90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 23031
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='39-14 Space,Ship Space Ship Crash Lands', format=5, channels=2, frequency=48000, lengthbytes=257824, lengthpcm=1337600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.270935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA39DF1868
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA39DF20D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Effects.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1093504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73A90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 348
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='40-25 Explosion Large Explosion 2', format=5, channels=2, frequency=48000, lengthbytes=228608, lengthpcm=1348480, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472839.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA39DF20D8
+[LOG] SoundI::release                          : 40-25 Explosion Large Explosion 2 (000002AA65A5FA98)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA22C38258)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA22B1AA08)
+[LOG] SoundI::release                          : 39-14 Space,Ship Space Ship Crash Lands (000002AA65A5F078)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22C380B8)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22B1A858)
+[LOG] SoundI::release                          : 40-25 Explosion Large Explosion 2 (000002AA39DF20D8)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA1B2F9C18)
+[LOG] SoundI::release                          :     40-25 Explosion Large Explosion 2 (000002AA22B1AD68)
+[LOG] SoundI::release                          : 39-14 Space,Ship Space Ship Crash Lands (000002AA39DF1868)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22C38598)
+[LOG] SoundI::release                          :     39-14 Space,Ship Space Ship Crash Lands (000002AA22B1A4F8)
+[LOG] SystemI::createSound                     : filename = FMOD\SpaceShooter\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002AA39DF20D8 : node = 000002AA1EF73E80
+[LOG] SystemI::createSound                     : add node to async list : head = 000002AA1CB2A9F8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA39DF20D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD\SpaceShooter\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1331104
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002AA1EF73F90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 7000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hi Voweler f2', format=5, channels=2, frequency=48000, lengthbytes=309216, lengthpcm=1094697, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA39DF20D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002AA22B1B0C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002AA22B1B0C8
+[LOG] SoundI::release                          : Hi Voweler f1 (000002A9AB8FC268)
+[LOG] SoundI::release                          :     Hi Voweler f1 (000002AA22C383F8)
+[LOG] SoundI::release                          :     Hi Voweler f1 (000002AA1B06E588)
+[LOG] SoundI::release                          :  (000002A9B2EDE528)
+[LOG] SoundI::release                          :     Galactica - C5 - 1 (000002A9AF3256B8)
+[LOG] SoundI::release                          :  (000002A9B2EDEC58)
+[LOG] SoundI::release                          :     Galactica - C1 - 1 (000002A9AF325518)
+[LOG] SoundI::release                          :  (000002A9B2EDF0A8)
+[LOG] SoundI::release                          :     Galactica - C2 - 1 (000002A9AF325378)
+[LOG] SoundI::release                          :  (000002AA281AB988)
+[LOG] SoundI::release                          :     Electroflow - C1 (000002AA60ACCAE8)
+[LOG] SoundI::release                          :  (000002A9B2EDEF38)
+[LOG] SoundI::release                          :     Alien Warning FX (000002A9AF3251D8)
+[LOG] SoundI::release                          :  (000002AA281AB6A8)
+[LOG] SoundI::release                          :     E-Perc 7 (000002AA60ACC468)
+[LOG] SoundI::release                          :  (000002AA281AB538)
+[LOG] SoundI::release                          :     Hard Wobble (000002AA60ACC2C8)
+[LOG] SoundI::release                          : Hi Voweler f2 (000002AA39DF20D8)
+[LOG] SoundI::release                          :     Hi Voweler f2 (000002AA22C38258)
+[LOG] SoundI::release                          :     Hi Voweler f2 (000002AA22B1B0C8)
+[LOG] SoundI::release                          :  (000002AA281ABDD8)
+[LOG] SoundI::release                          :     Water Drip 06 (000002AA60ACC7A8)
+[LOG] SoundI::release                          :  (000002AA281ABC68)
+[LOG] SoundI::release                          :     Water Drip 07 (000002AA60ACCC88)
+[LOG] SoundI::release                          :  (000002AA281ABAF8)
+[LOG] SoundI::release                          :     Kick 90s 3 (000002AA60ACC608)
+[LOG] SoundI::release                          :  (000002AA26D22FB8)
+[LOG] SoundI::release                          :     Woodchips (000002AA60ACCE28)
+[LOG] SoundI::release                          :  (000002AA26D23298)
+[LOG] SoundI::release                          :     Running Along Bench (000002AA60ACC128)
+[LOG] SoundI::release                          :  (000002AA3A084D28)
+[LOG] SoundI::release                          :     Air Conditioner 01 (000002AA1F860A88)
+[LOG] SoundI::release                          :  (000002AA3A084A48)
+[LOG] SoundI::release                          :     Phantasm - F#1 (000002AA1F8605A8)
+[LOG] SoundI::release                          :  (000002AA3A0845F8)
+[LOG] SoundI::release                          :     Phantasm - F#2 (000002AA1F8608E8)
+[LOG] SoundI::release                          :  (000002AA3A084E98)
+[LOG] SoundI::release                          :     Phantasm - C0 (000002AA23073368)
+[LOG] SoundI::release                          :  (000002AA3A084BB8)
+[LOG] SoundI::release                          :     Phantasm - C1 (000002AA1F860748)
+[LOG] SoundI::release                          :  (000002AA3A084318)
+[LOG] SoundI::release                          :     Phantasm - F#0 (000002AA23072CE8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)

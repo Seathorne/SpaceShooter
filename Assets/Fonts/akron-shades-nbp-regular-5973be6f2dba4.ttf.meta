@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 666157c2e1aa5e6428b7c6dcf1dca4aa
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Akron Shades NBP
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a183b08c7d2b03a49b2ba76cdb19e383, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
