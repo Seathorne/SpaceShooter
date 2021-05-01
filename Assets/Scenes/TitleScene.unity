@@ -447,6 +447,8 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 1a66e12f457630f44ae8beabaf468c9a, type: 3}
   hoverSprite: {fileID: 21300000, guid: ac09a2edbc8248c44bf5c7e146cad8ea, type: 3}
   clickSprite: {fileID: 21300000, guid: 4a70e0b5aa747794182394507a0366c3, type: 3}
+  UIHoverEvent: event:/UI/Hover
+  UISelectEvent: event:/UI/Select
   scene: GameScene
 --- !u!114 &587962135
 MonoBehaviour:
@@ -551,6 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934897251}
   - component: {fileID: 934897252}
+  - component: {fileID: 934897253}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -593,6 +596,30 @@ MonoBehaviour:
   - {fileID: 74942224}
   - {fileID: 1657148818}
   - {fileID: 1163322389}
+  UISelectEvent: event:/UI/Select
+--- !u!114 &934897253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934897250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Music/Background
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1163322389
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +902,8 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 0a93ec8b8ed0d244a81d0fc44124d486, type: 3}
   hoverSprite: {fileID: 21300000, guid: 9856b24702d2f0740bafea8a499e07fc, type: 3}
   clickSprite: {fileID: 21300000, guid: 86493a1be9c22314388bdd7bc9f7ba78, type: 3}
+  UIHoverEvent: event:/UI/Hover
+  UISelectEvent: event:/UI/Select
   scene: ControlsScene
 --- !u!114 &1600747738
 MonoBehaviour:
@@ -1256,6 +1285,8 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 3b25c0ff4206d6046968acffc049ee28, type: 3}
   hoverSprite: {fileID: 21300000, guid: ecf81395b3bd93a40ae45d23c3324a68, type: 3}
   clickSprite: {fileID: 21300000, guid: 931c4331b058f52459b8c05b60443ae5, type: 3}
+  UIHoverEvent: event:/UI/Hover
+  UISelectEvent: event:/UI/Select
 --- !u!114 &1894948815
 MonoBehaviour:
   m_ObjectHideFlags: 0

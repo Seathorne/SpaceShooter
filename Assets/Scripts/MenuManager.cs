@@ -9,7 +9,11 @@ namespace Assets.Scripts
         [SerializeField] private ImageButton[] buttons;
         [SerializeField] private GameObject[] controls;
 
+        [FMODUnity.EventRef] public string UISelectEvent;
+
         private int i = 0;
+
+        public bool Enable { get; set; } = true;
 
         // Start is called before the first frame update
         void Start()
@@ -20,6 +24,11 @@ namespace Assets.Scripts
         // Update is called once per frame
         void Update()
         {
+            if (!Enable)
+            {
+                return;
+            }
+
             int old = -1;
             if (VirtualKey.Down.JustPressed() || VirtualKey.Right.JustPressed())
             {
@@ -59,6 +68,8 @@ namespace Assets.Scripts
             {
                 obj.SetActive(!obj.activeSelf);
             }
+
+            FMODUnity.RuntimeManager.PlayOneShot(UISelectEvent);
         }
     }
 }

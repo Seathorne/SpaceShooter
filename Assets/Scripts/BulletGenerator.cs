@@ -28,7 +28,14 @@ namespace Assets.Scripts
             var sourceRb = source.GetComponent<Rigidbody2D>();
             rb.velocity = source.Facing * args.Speed + sourceRb.velocity;
 
-            FMODUnity.RuntimeManager.PlayOneShot((source is Player) ? PlayerShootEvent : EnemyShootEvent, source.transform.position);
+            // Play sound effect
+            float distance = (source is Player) ? 0f : Vector2.Distance(source.transform.position, GameManager.Instance.player.transform.position);
+            float distParam = Mathf.InverseLerp(0f, GameManager.HalfScreenSize.x * 2f, distance);
+
+            var sound = FMODUnity.RuntimeManager.CreateInstance((source is Player) ? PlayerShootEvent : EnemyShootEvent);
+            sound.setParameterByName("Distance", distParam);
+            sound.start();
+            sound.release();
 
             return new Bullet[] { bullet };
         }

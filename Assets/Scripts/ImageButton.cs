@@ -12,11 +12,15 @@ namespace Assets.Scripts
         [SerializeField] private Sprite hoverSprite;
         [SerializeField] private Sprite clickSprite;
 
+        [FMODUnity.EventRef] public string UIHoverEvent;
+        [FMODUnity.EventRef] public string UISelectEvent;
+
         protected event Action Clicked;
 
         public void OnMouseEnter()
         {
             image.sprite = hoverSprite;
+            FMODUnity.RuntimeManager.PlayOneShot(UIHoverEvent);
         }
 
         public void OnMouseExit()
@@ -37,7 +41,7 @@ namespace Assets.Scripts
         public void OnMouseUpAsButton()
         {
             Clicked?.Invoke();
+            FMODUnity.RuntimeManager.PlayOneShot(UISelectEvent);
         }
-
     }
 }

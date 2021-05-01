@@ -668,7 +668,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/Effects/Thrust
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -826,6 +826,8 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 27ed0cf3cff4d1648b5c5fc58395163e, type: 3}
   hoverSprite: {fileID: 21300000, guid: 3f464b25b9dac894e94984ce68e45721, type: 3}
   clickSprite: {fileID: 21300000, guid: a3afdfb62bde6234e97bdbc79559dfdf, type: 3}
+  UIHoverEvent: event:/UI/Hover
+  UISelectEvent: event:/UI/Select
   scene: TitleScene
 --- !u!114 &927940453
 MonoBehaviour:
@@ -1110,12 +1112,13 @@ MonoBehaviour:
   maxShipCount: 0
   GameStartEvent: event:/Effects/GameStart
   EnemySpawnEvent: event:/Effects/EnemySpawn
-  PauseEvent: event:/UI/Pause
+  UIPauseEvent: event:/UI/Pause
+  UIUnpauseEvent: event:/UI/Unpause
   pausedObjects:
   - {fileID: 1490322621}
   - {fileID: 927940449}
   - {fileID: 1835526105}
-  menu: {fileID: 0}
+  menu: {fileID: 2025207944}
 --- !u!114 &1370782998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,6 +1428,8 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 3b25c0ff4206d6046968acffc049ee28, type: 3}
   hoverSprite: {fileID: 21300000, guid: ecf81395b3bd93a40ae45d23c3324a68, type: 3}
   clickSprite: {fileID: 21300000, guid: 931c4331b058f52459b8c05b60443ae5, type: 3}
+  UIHoverEvent: event:/UI/Hover
+  UISelectEvent: event:/UI/Select
 --- !u!114 &1835526109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,3 +1515,4 @@ MonoBehaviour:
   - {fileID: 927940452}
   - {fileID: 1835526108}
   controls: []
+  UISelectEvent: 

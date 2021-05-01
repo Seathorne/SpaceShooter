@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c3c71237-c5bb-4b1f-ab40-09ef085826c3}">
+		<property name="assetPath">
+			<value>Limette f2.aif</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>22.702222222222222</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dd7e5c9b-7546-475a-b0e0-d868cace6abe}</destination>
+		</relationship>
+	</object>
+</objects>

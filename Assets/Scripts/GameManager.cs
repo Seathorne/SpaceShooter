@@ -33,7 +33,8 @@ namespace Assets.Scripts
 
         [FMODUnity.EventRef] public string GameStartEvent;
         [FMODUnity.EventRef] public string EnemySpawnEvent;
-        [FMODUnity.EventRef] public string PauseEvent;
+        [FMODUnity.EventRef] public string UIPauseEvent;
+        [FMODUnity.EventRef] public string UIUnpauseEvent;
 
         [SerializeField] private GameObject[] pausedObjects;
         [SerializeField] private MenuManager menu;
@@ -68,6 +69,7 @@ namespace Assets.Scripts
         private void StartGame()
         {
             IsPaused = false;
+            menu.Enable = false;
 
             foreach (var ship in FindObjectsOfType<Ship>())
             {
@@ -92,6 +94,8 @@ namespace Assets.Scripts
                     obj.SetActive(true);
                 }
                 menu.Deselect();
+                menu.Enable = true;
+                FMODUnity.RuntimeManager.PlayOneShot(Instance.UIPauseEvent);
             }
             else if (VirtualKey.Unpause.JustPressed() && IsPaused)
             {
@@ -101,6 +105,8 @@ namespace Assets.Scripts
                     obj.SetActive(false);
                 }
                 menu.Deselect();
+                menu.Enable = false;
+                FMODUnity.RuntimeManager.PlayOneShot(Instance.UIUnpauseEvent);
             }
         }
 
@@ -122,9 +128,9 @@ namespace Assets.Scripts
         /// <param name="setPaused"><see langword="true"/> to pause the game; <see langword="false"/> to unpause.</param>
         public static void Pause(bool setPaused = true)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Instance.PauseEvent);
             Time.timeScale = setPaused ? 0f : 1f;
             IsPaused = setPaused;
+            FMODUnity.RuntimeManager.PlayOneShot(setPaused ? Instance.UIPauseEvent : Instance.UIUnpauseEvent);
         }
 
         /// <summary>

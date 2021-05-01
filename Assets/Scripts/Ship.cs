@@ -149,7 +149,14 @@ namespace Assets.Scripts
 
         public virtual void HitBy(Bullet bullet)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(BulletHitEvent, bullet.transform.position);
+            float distance = (this is Player) ? 0f : Vector2.Distance(transform.position, GameManager.Instance.player.transform.position);
+            float distParam = Mathf.InverseLerp(0f, GameManager.HalfScreenSize.x * 2f, distance);
+
+            var sound = FMODUnity.RuntimeManager.CreateInstance(BulletHitEvent);
+            sound.setParameterByName("Distance", distParam);
+            sound.start();
+            sound.release();
+
             TakeDamage(bullet.Damage);
         }
 
@@ -188,11 +195,15 @@ namespace Assets.Scripts
 
                 var rb = faster.GetComponent<Rigidbody2D>();
 
-                float realMaxSpeed = 13f; // TODO max speed currently limited by drag
-                float param = Mathf.InverseLerp(0f, realMaxSpeed, rb.velocity.magnitude);
+                float distance = (this is Player) ? 0f : Vector2.Distance(transform.position, GameManager.Instance.player.transform.position);
+                float distParam = Mathf.InverseLerp(0f, GameManager.HalfScreenSize.x * 2f, distance);
 
-                FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(CollideEvent);
-                sound.setParameterByName("Speed", param);
+                float realMaxSpeed = 13f; // TODO max speed currently limited by drag
+                float speedParam = Mathf.InverseLerp(0f, realMaxSpeed, rb.velocity.magnitude);
+
+                var sound = FMODUnity.RuntimeManager.CreateInstance(CollideEvent);
+                sound.setParameterByName("Distance", distParam);
+                sound.setParameterByName("Speed", speedParam);
                 sound.start();
                 sound.release();
             }
@@ -200,9 +211,7 @@ namespace Assets.Scripts
 
         public void Die()
         {
-            float distance = (this is Player)
-                ? 0f
-                : Vector2.Distance(transform.position, GameManager.Instance.player.transform.position);
+            float distance = (this is Player) ? 0f : Vector2.Distance(transform.position, GameManager.Instance.player.transform.position);
             float param = Mathf.InverseLerp(0f, GameManager.HalfScreenSize.x * 2f, distance);
 
             FMOD.Studio.EventInstance sound = FMODUnity.RuntimeManager.CreateInstance(ExplodeEvent);

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d84aeba3-125a-46ac-b07f-ca57f627dcc0}">
+		<property name="assetPath">
+			<value>SEI_vs_select.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.67337868480725627</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dd7e5c9b-7546-475a-b0e0-d868cace6abe}</destination>
+		</relationship>
+	</object>
+</objects>
